@@ -7,4 +7,4 @@ run: bin/signal_classifier
 	@bin/signal_classifier
 
 clean:
-	rm -rf bin
+	@rm -rf bin
