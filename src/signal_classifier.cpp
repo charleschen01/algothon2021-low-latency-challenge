@@ -431,7 +431,7 @@ int main()
         }
 
         //output is our regression value
-        std::cout << (output>0) << std::endl;
+        std::cout << (output>0 ? 1 : 0) << std::endl;
     }
 
     //auto t2 = std::chrono::high_resolution_clock::now();
