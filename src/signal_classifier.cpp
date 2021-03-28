@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <chrono>
+//#include <chrono>
 
 int main()
 {
-    auto t1 = std::chrono::high_resolution_clock::now();
+    //auto t1 = std::chrono::high_resolution_clock::now();
     std::string s;
 
     double intercept = 0.0004930404047349703;
@@ -434,9 +434,9 @@ int main()
         std::cout << (output>0) << std::endl;
     }
 
-    auto t2 = std::chrono::high_resolution_clock::now();
-    auto ms_int = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
-    std::cout << ms_int.count() << "ms\n";
+    //auto t2 = std::chrono::high_resolution_clock::now();
+    //auto ms_int = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+    //std::cout << ms_int.count() << "ms\n";
     return 0;
 }
 
