@@ -1,14 +1,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//#include <chrono>
-
-using namespace std;
+#include <chrono>
 
 int main()
 {
-    //auto t1 = chrono::high_resolution_clock::now();
-    string s;
+    auto t1 = std::chrono::high_resolution_clock::now();
+    std::string s;
 
     double intercept = 0.0004930404047349703;
     double coef[400] = {
@@ -413,7 +411,7 @@ int main()
             -0.01213168870475223,
             -0.018515939019423354};
     
-    while (cin >> s) {
+    while (std::getline(std::cin, s)) {
 
         double output = intercept;
 
@@ -433,12 +431,12 @@ int main()
         }
 
         //output is our regression value
-        cout << (output>0) << endl;
+        std::cout << (output>0) << std::endl;
     }
 
-    //auto t2 = chrono::high_resolution_clock::now();
-    //auto ms_int = chrono::duration_cast<chrono::milliseconds>(t2 - t1);
-    //cout << ms_int.count() << "ms\n";
+    auto t2 = std::chrono::high_resolution_clock::now();
+    auto ms_int = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+    std::cout << ms_int.count() << "ms\n";
     return 0;
 }
 
